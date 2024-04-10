@@ -1,0 +1,107 @@
+/* base rule */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px  */
+  /* scroll-behavior: smooth; */
+  /* scroll-snap-type: Y proximity; */
+}
+
+.container {
+    margin: 0 4rem; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+p,
+li,
+a,
+label {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: var(--para-color);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* base rule end here */
+
+/* theme */
+:root {
+  --main-color: #0062ff;
+  --supporting-color: #ebf3fe;
+  --font-color: #424242;
+  /* --bg-color: #ffffff; */
+  --bg-color: #f7f7f7;
+  --heading-color: #000a19;
+  --hero-heading-color: #5b8fe3;
+  --white-color: #ffffff;
+  --para-color: #504e4d;
+  --bnt-hover-bg-color: #003b99;
+  --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --footer-bg-color: #040d12;
+  --buttonColor: #2a2c30;
+}
+
+/* layout */
+.flex {
+    display: flex;
+}
+.align, .justify {
+    align-items: center;
+    justify-content: center;
+}
+/* module / reusable  */
+
+/* states  */
+
+.btn:hover {
+  background-color: var(--bnt-hover-bg-color);
+  cursor: pointer;
+  box-shadow: var(--btn-box-shadow);
+}
+
+
+/* heading section start here */
+.header-txt {
+    background-color: var(--buttonColor);
+    padding: 2rem;
+    justify-content: space-between;
+    & .head-para {
+        color: white;
+    }
+    & .signIn-signUp {
+        text-transform: uppercase;
+        gap: 3.4rem;
+        & a {
+            color: var(--hero-heading-color);
+            font-weight: 700;
+        }
+    }
+}
+
+
+/* heading section end here */
