@@ -15,7 +15,7 @@ html {
 }
 
 .container {
-    margin: 0 4rem; 
+  margin: 0 4rem;
 }
 
 h1,
@@ -30,7 +30,8 @@ h6 {
 p,
 li,
 a,
-label {
+label, 
+button {
   font-family: "Urbanist", sans-serif;
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
@@ -64,18 +65,33 @@ li {
   --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --footer-bg-color: #040d12;
   --buttonColor: #2a2c30;
+  --gradient-color1: #3e86fa;
+  --gradient-color2: #e7f1fe;
 }
 
 /* layout */
 .flex {
-    display: flex;
+  display: flex;
 }
 .align {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.grid {
+  display: grid;
+}
+.grid-two--cols {
+  grid-template-columns: 1fr 1fr;
 }
 /* module / reusable  */
-
+.btn {
+  background-color: var(--buttonColor);
+  color:var(--supporting-color);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.7rem;
+  transition: all 0.2s linear;
+}
 /* states  */
 
 .btn:hover {
@@ -84,58 +100,117 @@ li {
   box-shadow: var(--btn-box-shadow);
 }
 
-
 /* heading section start here */
 .header-txt {
-    background-color: var(--buttonColor);
-    padding: 2rem;
-    justify-content: space-between;
-    & .head-para {
-        color: white;
+  background-color: var(--buttonColor);
+  padding: 2rem;
+  justify-content: space-between;
+  & .head-para {
+    color: white;
+  }
+  & .signIn-signUp {
+    text-transform: uppercase;
+    gap: 3.4rem;
+    & a {
+      color: var(--hero-heading-color);
+      font-weight: 700;
     }
-    & .signIn-signUp {
-        text-transform: uppercase;
-        gap: 3.4rem;
-        & a {
-            color: var(--hero-heading-color);
-            font-weight: 700;
-        }
-    }
+  }
 }
-.header-content{
-    justify-content: space-between;
-    padding: 2rem;
-    & .heading-links {
-        gap: 3rem;
-        & a {
-            font-weight: 600;
-            text-transform: uppercase;
-            position: relative;
-            transition: all 0.2s linear;
-            
-            &::after {
-                content:"";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                border: 0.1rem solid var(--bnt-hover-bg-color); 
-                opacity: 0;   
-                transition: all 0.2s linear;
+.header-content {
+  justify-content: space-between;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  & .heading-links {
+    gap: 3rem;
+    & a {
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: all 0.2s linear;
 
-            }
-            &:hover::after {
-                opacity: 1;
-                width: 100%;
-                color: var(--hero-heading-color);
-            }
-            &:hover {
-                color: var(--bnt-hover-bg-color);
-            }
-        }
-        
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -.3rem;
+        left: 0;
+        width: 0;
+        border: 0.1rem solid var(--bnt-hover-bg-color);
+        opacity: 0;
+        transition: all 0.2s linear;
+      }
+      &:hover::after {
+        opacity: 1;
+        width: 100%;
+        color: var(--hero-heading-color);
+      }
+      &:hover {
+        color: var(--bnt-hover-bg-color);
+      }
     }
+    & .carts:hover {
+      background-color: var(--buttonColor);
+      color: white;
+    }
+  }
 }
-
-
 /* heading section end here */
+
+/* Hero section start here */
+.hero-section {
+  place-items: center;
+  padding: 8rem 2rem 11rem;
+  gap: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background: linear-gradient(
+    45deg,
+    var(--gradient-color1),
+    var(--gradient-color2)
+  );
+
+  & .hero-content {
+    & .heading {
+      font-size: 1.5rem;
+    }
+    & .sub-heading {
+      font-size: 5rem;
+      color: var(--heading-color);
+    }
+    & .subPara {
+      color: white;
+      margin: 2rem 0 4.2rem;
+    }
+  }
+}
+.hero-section .hero-image img {
+  width: 100%;
+}
+
+/* shape divider */
+.shape-divider {
+  position: relative;
+  margin-bottom: 5rem;
+}
+.custom-shape-divider-bottom-1712780619 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1712780619 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 109px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1712780619 .shape-fill {
+  fill: #ffffff;
+}
+
+/* hero section End here */
