@@ -32,7 +32,7 @@ li,
 a,
 label {
   font-family: "Urbanist", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   letter-spacing: 0.1rem;
   font-weight: 400;
   color: var(--para-color);
@@ -70,7 +70,7 @@ li {
 .flex {
     display: flex;
 }
-.align, .justify {
+.align {
     align-items: center;
     justify-content: center;
 }
@@ -100,6 +100,40 @@ li {
             color: var(--hero-heading-color);
             font-weight: 700;
         }
+    }
+}
+.header-content{
+    justify-content: space-between;
+    padding: 2rem;
+    & .heading-links {
+        gap: 3rem;
+        & a {
+            font-weight: 600;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.2s linear;
+            
+            &::after {
+                content:"";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                border: 0.1rem solid var(--bnt-hover-bg-color); 
+                opacity: 0;   
+                transition: all 0.2s linear;
+
+            }
+            &:hover::after {
+                opacity: 1;
+                width: 100%;
+                color: var(--hero-heading-color);
+            }
+            &:hover {
+                color: var(--bnt-hover-bg-color);
+            }
+        }
+        
     }
 }
 
