@@ -30,7 +30,7 @@ h6 {
 p,
 li,
 a,
-label, 
+label,
 button {
   font-family: "Urbanist", sans-serif;
   font-size: 1.7rem;
@@ -53,7 +53,7 @@ li {
 /* theme */
 :root {
   --main-color: #0062ff;
-  --supporting-color: #ebf3fe;
+  --supporting-color: #dfe6ed;
   --font-color: #424242;
   /* --bg-color: #ffffff; */
   --bg-color: #f7f7f7;
@@ -79,14 +79,18 @@ li {
 }
 .grid {
   display: grid;
+  place-items: center;
 }
 .grid-two--cols {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-three--cols {
+  grid-template-columns: repeat(3, 1fr);
 }
 /* module / reusable  */
 .btn {
   background-color: var(--buttonColor);
-  color:var(--supporting-color);
+  color: var(--supporting-color);
   padding: 1rem 2rem;
   border: none;
   border-radius: 0.7rem;
@@ -114,7 +118,7 @@ li {
     & a {
       color: var(--hero-heading-color);
       font-weight: 700;
-    } 
+    }
   }
 }
 .header-content {
@@ -136,7 +140,7 @@ li {
       &::after {
         content: "";
         position: absolute;
-        bottom: -.3rem;
+        bottom: -0.3rem;
         left: 0;
         width: 0;
         border: 0.1rem solid var(--bnt-hover-bg-color);
@@ -165,7 +169,8 @@ li {
   place-items: center;
   padding: 8rem 2rem 11rem;
   gap: 5rem;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   background: linear-gradient(
     45deg,
     var(--gradient-color1),
@@ -219,8 +224,53 @@ li {
 
 /* hero section End here */
 
-
-
 /* cart section start here */
+.cart-section {
+  padding: 5rem 0;
+  & .grid-three--cols{
+    gap: 3rem;
+  }
+}
+.cart-section .grid .cards {
+  gap: 1rem;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  height: 100%;
+
+  & .card-content {
+    & .card-para {
+      font-size: 1.5rem;
+    }
+    & .card-heading {
+      font-size: 2.4rem;
+      text-transform: capitalize;
+      margin: 0.6rem 0 1.6rem;
+      font-weight: 500;
+    }
+    & .cart-link {
+      color: var(--bnt-hover-bg-color);
+      border-bottom: 1px solid var(--bnt-hover-bg-color);
+    }
+  }
+  & img {
+    width: 100%;
+    position: relative;
+    transform: skew(-10deg);
+  }
+}
+& .cards::before {
+  content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100% 0% 0% 100% / 100% 0%;
+    background-color: var(--supporting-color);
+    /* z-index: 1; */
+}
+
 
 /* cart section End here */
