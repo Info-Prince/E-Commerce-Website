@@ -114,7 +114,7 @@ li {
     & a {
       color: var(--hero-heading-color);
       font-weight: 700;
-    }
+    } 
   }
 }
 .header-content {
@@ -123,6 +123,10 @@ li {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   & .heading-links {
     gap: 3rem;
+    & .carts .fa-solid {
+      filter: invert(0);
+      font-size: 2rem;
+    }
     & a {
       font-weight: 600;
       text-transform: uppercase;
@@ -214,3 +218,9 @@ li {
 }
 
 /* hero section End here */
+
+
+
+/* cart section start here */
+
+/* cart section End here */
