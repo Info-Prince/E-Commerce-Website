@@ -67,6 +67,7 @@ li {
   --buttonColor: #2a2c30;
   --gradient-color1: #3e86fa;
   --gradient-color2: #e7f1fe;
+  --product-type-color: #e7d6d6;
 }
 
 /* layout */
@@ -86,6 +87,9 @@ li {
 }
 .grid-three--cols {
   grid-template-columns: repeat(3, 1fr);
+}
+.grid-four--cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 /* module / reusable  */
 .btn {
@@ -226,7 +230,7 @@ li {
 
 /* cart section start here */
 .cart-section {
-  padding: 5rem 0;
+  padding: 3rem 0;
   & .grid-three--cols{
     gap: 3rem;
   }
@@ -272,3 +276,73 @@ li {
     /* z-index: 1; */
 }
 /* cart section End here */
+
+/* services section start here  */
+.services {
+  place-items: start;
+  padding: 6.4rem 0 2.4rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  & .grid-two--cols {
+    width: 100%;
+    border-right: 1px solid var(--gradient-color2);
+    grid-template-columns: 0.4fr 1fr;
+    place-items: center ;
+    padding: 3rem;
+    gap: 0.5rem;
+    & .icon-part {
+      font-size: 3rem;
+      color: var(--gradient-color1);
+    }
+    & .icon-content {
+      & .icon-para1{
+        font-size: 1.8rem;
+      }
+      & .icon-para2{
+        font-size: 1.2rem;
+      }
+    }
+  }
+  & .support {
+    border-right: none;
+  }
+}
+/* services section end here  */
+
+/* why choose section */
+.product-section {
+  & .why-choose--product {
+    padding: 8.6rem 2.4rem 0;
+    & .product-heading {
+      font-size: 2.9rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.product-section .product-card {
+  padding: 3rem 2.4rem ;
+  & .product1 {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  padding: 2rem;
+    & .product-type {
+      background-color: var(--product-type-color);
+      padding: 0.5rem 0.9rem;
+      border-radius: 2rem;
+      font-size: 1.2rem;
+      width: fit-content;
+    }
+    & img {
+      width: 32rem;
+      max-width: 100%;
+    }
+    & .product-type--heading  {
+      font-size: 3.3rem;
+    }
+
+  }
+}
+/* why choose section */
