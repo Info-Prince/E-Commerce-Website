@@ -92,6 +92,9 @@ li {
 .grid-four--cols {
   grid-template-columns: repeat(4, 1fr);
 }
+.grid-two--rows {
+  /* grid-template-rows: repeat(2, 1fr); */
+}
 /* module / reusable  */
 .btn {
   background-color: var(--buttonColor);
@@ -310,7 +313,7 @@ li {
 }
 /* services section end here  */
 
-/* why choose section */
+/* product section */
 .product-section {
   & .why-choose--product {
     padding: 8.6rem 2.4rem 0;
@@ -330,6 +333,9 @@ li {
     align-items: start;
     gap: 1rem;
     padding: 2rem;
+    width: 100%;
+    height: 100%;
+
     & .product-type {
       background-color: var(--product-type-color);
       padding: 0.5rem 0.9rem;
@@ -401,4 +407,54 @@ li {
     }
   }
 }
-/* why choose section */
+/* product section */
+
+
+/* Why choose section start here */
+.why-choose--section {
+  & .why-choose--product {
+    padding: 8.6rem 0;
+    & .product-heading {
+      font-size: 2.9rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.why-choose--section .grid-three--cols {
+  gap: 7rem;
+  & .leftSide-content, .rightSide-content{
+    flex-direction: column;
+    gap: 2rem;
+    & .contentsOf-why-choose {
+      flex-direction: column;
+      margin-bottom: 3rem;
+      align-items: end;
+      text-align: justify;
+      & .sNo {
+        padding: 1.2rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        font-weight: 500;
+        font-size: 2rem;
+        text-align: center;
+        background-color: var(--gradient-color2);
+        width: fit-content;
+        color: var(--main-color);
+      }
+      & .why-choose-heading {
+        font-size: 2rem;
+        margin: 1.9rem 0 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  & img {
+
+  }
+  & .rightSide-content .contentsOf-why-choose {
+        align-items: start;
+   }
+}
+/* Why choose section end here */
