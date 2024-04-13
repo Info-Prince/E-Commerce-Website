@@ -69,6 +69,7 @@ li {
   --gradient-color2: #e7f1fe;
   --product-type-color: #e7d6d6;
   --rating-color: #e9db16;
+  --footer-bgcolor: #2a2c30;
 }
 
 /* layout */
@@ -423,6 +424,7 @@ li {
 
 .why-choose--section .grid-three--cols {
   gap: 7rem;
+  padding: 1rem 1rem 9rem;
   & .leftSide-content,
   .rightSide-content {
     flex-direction: column;
@@ -499,6 +501,7 @@ li {
     border-radius: 50%;
     background-color: transparent;
     border: .6rem solid #f5f9ff;
+    z-index:-1;
   }
 }
 
@@ -521,3 +524,66 @@ li {
   }
 }
 /* Why choose section end here */
+
+
+/* Footer section start here */
+.footer-section .container{
+  padding: 6.4rem 0 2.4rem;
+  background-color: var(--footer-bgcolor);
+  justify-content: space-between;
+  align-items: start;
+  border-bottom: 1px solid var(--font-color);
+  & .flex {
+    flex-direction: column;
+    
+  }
+  & .logo-and-para {
+    align-items: start;
+    margin-left: 2rem;
+    & p {
+      margin: 2.5rem 0;
+      color: white;
+    }
+  }
+  & .footer-links  {
+    & h3 {
+      align-items: start;
+      font-size: 1.8rem;
+      color: white;
+      letter-spacing: .1rem;
+      margin-bottom: 2.1rem;
+      font-weight: 500;
+    }
+    & a {
+      color: #d7f1ff;
+      margin-bottom: 1.5rem;
+      transition: 0.18s all linear;
+      &:hover {
+        color: #99aab3;
+      }
+    }
+    & p {
+      color: #99aab3;
+      margin: 0  0 1.8rem 0;
+    }
+    & input {
+      background-color: black;
+      border: none;
+      border-radius: 0.2rem;
+      border-bottom: 2px solid white;
+      padding: 1.7rem 0.9rem;
+    }
+  }
+  & .last-link {
+    margin-right: 2rem;
+  }
+}
+
+.footer-section .web-right {
+  font-size: 1.9rem;
+    align-items: center;
+    justify-content: center;
+    color: #5d5d5d;
+    padding: 3rem 0;
+}
+/* Footer section end here */
